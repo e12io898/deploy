@@ -5,3 +5,4 @@ psycopg2-binary==2.9.7
 requests==2.25.1
 sqlparse==0.4.4
 gunicorn
+flake8
