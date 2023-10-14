@@ -22,7 +22,7 @@ class StockProduct(models.Model):
         on_delete=models.CASCADE,
         related_name='positions',
     )
-    product = models.ForeignKey(
+    products_test = models.ForeignKey(
         Product,
         on_delete=models.CASCADE,
         related_name='positions',
