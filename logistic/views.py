@@ -13,7 +13,7 @@ class ProductViewSet(ModelViewSet):
 
     # Поиск продукта по названию/описанию:
     filter_backends = [SearchFilter]
-    search_fields = ['title', 'description']
+    search_fields = ['description', 'title']
 
 
 class StockViewSet(ModelViewSet):
