@@ -42,3 +42,14 @@ jobs:
       - name: Тестирование
         run: python manage.py test
 # + env: переменные для работы бд, если в тестах она используется
+
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        env:
+          PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          envs: PASSWORD
+          script: expect /home/e12io898/deploy.exp
