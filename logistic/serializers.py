@@ -15,7 +15,6 @@ class ProductPositionSerializer(serializers.ModelSerializer):
         fields = ['product', 'quantity', 'price']
 
 
-
 class StockSerializer(serializers.ModelSerializer):
     positions = ProductPositionSerializer(many=True)
 
