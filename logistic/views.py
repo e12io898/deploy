@@ -23,4 +23,4 @@ class StockViewSet(ModelViewSet):
 
     # Поиск склада по конкретному продукту:
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['products_test']
+    filterset_fields = ['products']
